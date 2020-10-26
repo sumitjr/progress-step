@@ -1,3 +1,43 @@
+@keyframes brdr-step1 {
+  0% {
+    width: 0%;
+    border-bottom: 4px solid aqua;
+  }
+  100% {
+    width: 33.33%;
+    border-bottom: 4px solid aqua;
+  }
+}
+
+@keyframes brdr-step2 {
+  0% {
+    width: 33.33%;
+    border-bottom: 4px solid aqua;
+  }
+  100% {
+    width: 66.66%;
+    border-bottom: 4px solid aqua;
+  }
+}
+
+@keyframes brdr-step3 {
+  0% {
+    width: 66.66%;
+    border-bottom: 4px solid aqua;
+  }
+  100% {
+    width: 100%;
+    border-bottom: 4px solid aqua;
+  }
+}
+
+.progress {
+  animation-name: brdr-step1;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 .App {
   text-align: center;
 }
@@ -18,10 +58,50 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.step {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  /*   border-bottom: 4px solid green; */
+  height: 120px;
+}
+
+.body {
+  margin: 80px 0;
+  border: 1px solid white;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  bottom: 40px;
+  /* border: 1px solid white; */
+  /* height: 80px; */
+}
+
+.footer > button {
+  height: 50px;
+  width: 120px;
+  border-radius: 5px;
+  margin: 0 80px;
 }
 
 .App-link {
