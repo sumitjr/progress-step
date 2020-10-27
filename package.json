@@ -21,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'pre commit running \n' && npm run prettier-check"
+      "pre-commit": "echo 'pre commit running \n' && npm run prettier-format"
     }
   },
   "eslintConfig": {
